@@ -1,7 +1,9 @@
 -- Made by WideSteal321. Do not steal and upload as your own.
 
 local Regions = { }
-Instance.new("Folder", workspace).Name = "Regions__"
+local RegionsFolder = Instance.new("Folder")
+RegionsFolder.Name = "Regions__"
+RegionsFolder.Parent = workspace
 
 return {
 	new = function(Vector_1, Vector_2, Orientation, CFrame_)

@@ -1,5 +1,5 @@
 â ï¸ WARNINGâ ï¸
-â ï¸ THIS MODULE HAS NOT BEEN CORRECTLY TESTED AND IS UNMAINTAINEDâ ï¸
+â ï¸ THIS MODULE HAS NOT BEEN CORRECTLY TESTED â ï¸
 
 Created by WideSteal321/widesteal. Do not steal.
 

@@ -33,8 +33,6 @@ return {
 			Information = Info 
 			Info = nil
 			Proxy = Proxy .. "?" .. Information
-		else
-			Proxy = Proxy
 		end
 		
 		return HTTP:GetAsync(Proxy)

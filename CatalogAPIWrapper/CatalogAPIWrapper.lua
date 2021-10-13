@@ -1,11 +1,15 @@
+-- Services
 local HTTP = game:GetService("HttpService")
-local InsertService = game:GetService("InsertService")
+--local InsertService = game:GetService("InsertService") // Possible future use
 
 return {
 	GetAsyncProxy = function(Proxy, Location, Information)
+		-- Default proxy
 		if not Proxy then 
 			Proxy = "https://rprxy.deta.dev/catalog/v1/"
 		end
+		
+		-- Handle information
 		if Information then 
 			local Info = ""
 			for _, v in pairs(Information) do
@@ -13,58 +17,62 @@ return {
 			end
 			Information = Info 
 			Info = nil
-			Proxy = Proxy .. (Location or "") .. "?" .. Information
+			Proxy ..= (Location or "") .. "?" .. Information
 		else
-			Proxy = Proxy .. (Location or "") 
+			Proxy ..= (Location or "") 
 		end
 		
+		-- Make and return request
 		return HTTP:GetAsync(Proxy) or "HTTP 408/404"
 	end,
 
 	GetAsyncSearchProxy = function(Proxy, Information)
+		-- Default proxy
 		if not Proxy then 
 			Proxy = "https://rprxy.deta.dev/catalog/v1/search/items/details"
 		end
+		
+		-- Handle information
 		if Information then 
 			local Info = ""
 			for _, v in pairs(Information) do
 				Info ..= "&" .. v
 			end
 			Information = Info 
-			Info = nil
-			Proxy = Proxy .. "?" .. Information
+			Proxy ..= "?" .. Information
 		end
 		
+		-- Make and return request
 		return HTTP:GetAsync(Proxy) or "HTTP 408/404"
 	end,
 
 	GetAsync = function(Information, Location)
-		local Site;
+		-- Handle information
+		local Site = "https://catalog.roblox.com/v1/" .. (Location or "")
 		if Information then 
 			local Info = ""
 			for _, v in pairs(Information) do
 				Info ..= "&" .. v
 			end
 			Information = Info 
-			Info = nil
 		end
-		Site = "https://catalog.roblox.com/v1/" .. (Location or "")
 
+		-- Make and return request
 		return HTTP:GetAsync(Site .. "?" .. (Information or "")) or "HTTP 408/404"
 	end,
 
 	GetAsyncSearch = function(Information)
-		local Site;
+		-- Handle information
+		local Site = "https://catalog.roblox.com/v1/search/items/details"
 		if Information then 
 			local Info = ""
 			for _, v in pairs(Information) do
 				Info ..= "&" .. v
 			end
 			Information = Info 
-			Info = nil
 		end
-		Site = "https://catalog.roblox.com/v1/search/items/details"
 
+		-- Make and return request
 		return HTTP:GetAsync(Site .. "?" .. (Information or "")) or "HTTP 408/404"
 	end,
 }

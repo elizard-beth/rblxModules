@@ -3,6 +3,8 @@
 
 Created by WideSteal321/widesteal. Do not steal.
 
+Unstable build v1.0.1
+
 How to use this module:
 This module first requires HTTP services to be enabled.
 requiring this module returns an array of 4 functions, these are:

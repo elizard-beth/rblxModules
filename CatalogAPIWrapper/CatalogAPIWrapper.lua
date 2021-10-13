@@ -16,7 +16,6 @@ return {
 				Info ..= "&" .. v
 			end
 			Information = Info 
-			Info = nil
 			Proxy ..= (Location or "") .. "?" .. Information
 		else
 			Proxy ..= (Location or "") 

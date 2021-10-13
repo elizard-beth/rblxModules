@@ -6,10 +6,10 @@ Created by WideSteal321/widesteal. Do not steal.
 How to use this module:
 This module first requires HTTP services to be enabled.
 requiring this module returns an array of 4 functions, these are:
--> GetAsyncProxy
--> GetAsyncSearchProxy
--> GetAsync
--> GetAsyncSearch
+- GetAsyncProxy
+- GetAsyncSearchProxy
+- GetAsync
+- GetAsyncSearch
 *ALL OF WHICH MAKE HTTP GET REQUESTS*
 
 As you can probably tell these are all very similar, but they all

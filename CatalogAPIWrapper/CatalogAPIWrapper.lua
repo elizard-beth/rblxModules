@@ -18,7 +18,7 @@ return {
 			Proxy = Proxy .. (Location or "") 
 		end
 		
-		return HTTP:GetAsync(Proxy)
+		return HTTP:GetAsync(Proxy) or "HTTP 408"
 	end,
 
 	GetAsyncSearchProxy = function(Proxy, Information)
@@ -35,7 +35,7 @@ return {
 			Proxy = Proxy .. "?" .. Information
 		end
 		
-		return HTTP:GetAsync(Proxy)
+		return HTTP:GetAsync(Proxy) or "HTTP 408"
 	end,
 
 	GetAsync = function(Information, Location)
@@ -47,12 +47,10 @@ return {
 			end
 			Information = Info 
 			Info = nil
-			Site = "https://catalog.roblox.com/v1/" .. (Location or "") .. "?" .. Information
-		else
-			Site = "https://catalog.roblox.com/v1/" .. (Location or "")
 		end
+		Site = "https://catalog.roblox.com/v1/" .. (Location or "")
 
-		return HTTP:GetAsync(Site .. (Information or ""))
+		return HTTP:GetAsync(Site .. "?" .. (Information or "")) or "HTTP 408"
 	end,
 
 	GetAsyncSearch = function(Information)
@@ -64,11 +62,9 @@ return {
 			end
 			Information = Info 
 			Info = nil
-			Site = "https://catalog.roblox.com/v1/search/items/details?" .. Information
-		else
-			Site = "https://catalog.roblox.com/v1/search/items/details"
 		end
+		Site = "https://catalog.roblox.com/v1/search/items/details"
 
-		return HTTP:GetAsync(Site .. (Information or ""))
+		return HTTP:GetAsync(Site .. "?" .. (Information or "")) or "HTTP 408"
 	end,
 }

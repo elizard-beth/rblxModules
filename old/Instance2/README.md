@@ -1,10 +1,11 @@
 
 Example code
-
+```lua
 local Instance2 = _G.Instance2() --// require(workspace.Instance2) would be recommended 
 Instance2.new("Main", "script", game.Workspace)
+```
 
-Version 0.1 , beta, expect bugs, unadded features, etc.
+Unmaintained, Version 0.1.1 
 
 Features:
 - "Caching" feature, if allowed, destroyed instances's information (properties, etc.) may
@@ -24,16 +25,11 @@ print(Instance2.old("scipt")) -- get the cached object, as it exists it will -->
 ```
 
 Functions:
-### Instance2.new(Name, Type, Parent) --> create a new object and instance
-### Instance2.old(Name, n) --> find a cached destroyed object
-### Instance2.getAll() --> returns all objects
-### Instance2.get(Name, n) --> returns an object
-### Instance2.getInstance(Name, n) --> returns an objects instance
-### Instance2.getAllDestroyed() --> returns all cached objects
-### Instance2.clearAll() --| Server-sided ONLY --> destroys all objects created with Instance2
+- Instance2.new(Name, Type, Parent) --> create a new object and instance
+- Instance2.old(Name, n) --> find a cached destroyed object
+- Instance2.getAll() --> returns all objects
+- Instance2.get(Name, n) --> returns an object
+- Instance2.getInstance(Name, n) --> returns an objects instance
+- Instance2.getAllDestroyed() --> returns all cached objects
+- Instance2.clearAll() --| Server-sided ONLY --> destroys all objects created with Instance2
 
-
-
-Updates:
-First update in a while \\ 20/07/2021:
-- Fixed clearAll()

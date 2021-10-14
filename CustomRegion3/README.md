@@ -4,7 +4,7 @@ Made by WideSteal321. Do not steal and upload as your own.
 To get set up, please use `local Region3_2 = require([wherever you 
 	have placed the module])`.
 	
-Basic functions:	
+### Basic functions:	
 - Region3_2.new(Vector_1: Vector3, Vector_2: Vector3, 
 		Orientation: Vector3 (optional), CFrame_: CFrame (optional))
 		
@@ -15,7 +15,7 @@ This function creates a new Region3_2 instance, represented as a part.
 This function creates a new Region3_2 instance from one part to another, represented as a part.
 
 
-Region3_2 instance methods/properties:
+### Region3_2 instance methods/properties:
 - Region.instance
 
 Returns the actual instance, should not be modified

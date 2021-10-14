@@ -7,22 +7,29 @@ To get set up, please use `local Region3_2 = require([wherever you
 Basic functions:	
 - Region3_2.new(Vector_1: Vector3, Vector_2: Vector3, 
 		Orientation: Vector3 (optional), CFrame_: CFrame (optional))
+		
 This function creates a new Region3_2 instance, represented as a part.
 - Region3_2.FromParts(Part1: Part, Part2: Part,
 		Orientation: Vector3 (optional), CFrame_: CFrame (optional))
+		
 This function creates a new Region3_2 instance from one part to another, represented as a part.
 
 
 Region3_2 instance methods/properties:
 - Region.instance
+
 Returns the actual instance, should not be modified
 - Region.CFrame 
+
 Returns the CFrame of the instance, can be modified
 - Region.Size
+
 Returns the Size of the instance, can be modified
 - Region:GetParts(MaxParts: number, Ignore: any)
+
 Returns an array of all of the parts that are inside of the instance
 - Region:Destroy()
+
 Completely destroys the region.
 		
 Example: 
